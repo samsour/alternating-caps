@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Alternating Caps</title>
 </head>
+
 <body>
-    Alternating caps
+    <input class="js-input">
+    <textarea class="js-output"></textarea>
+    <button class="js-copy">Copy to clipboard</button>
+    <span class="js-note"></span>
+
+    <script>
+        var input = document.querySelector('.js-input');
+        var outputTextarea = document.querySelector('.js-output');
+        var copyButton = document.querySelector('.js-copy');
+        var note = document.querySelector('.js-note');
+
+        input.addEventListener("keyup", e => {
+            if (input.value.length > 0) {
+                outputTextarea.value = getAlternatedCaps(input.value);
+            }
+        });
+
+        copyButton.addEventListener("click", e => {
+            outputTextarea.select();
+            document.execCommand('copy');
+            note.innerHTML = "copied to clipboard";
+        });
+
+        function getAlternatedCaps(input) {
+            var output = "";
+            var uppercase = true;
+            for (var letter of input) {
+                if (uppercase) {
+                    output += letter.toUpperCase();
+                } else {
+                    output += letter;
+                }
+                uppercase = !uppercase;
+            }
+            return output;
+        }
+    </script>
 </body>
+
 </html>
