@@ -3,10 +3,15 @@
     "short_name": "AC-Formatter",
     "icons": [
         {
-          "src": "/logo.png",
-          "type": "image/png",
-          "sizes": "192x192"
-        }
+            "src": "/logo.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/logo.png",
+            "type": "image/png",
+            "sizes": "512x512"
+          }
     ],
     "lang": "en-US",
     "start_url": "/index.html",
