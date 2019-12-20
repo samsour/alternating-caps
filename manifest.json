@@ -1,0 +1,16 @@
+{
+    "name": "Alternating Caps Formatter",
+    "short_name": "AC-Formatter",
+    "icons": [
+        {
+          "src": "/logo.png",
+          "type": "image/png",
+          "sizes": "128x128"
+        }
+    ],
+    "lang": "en-US",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "white",
+    "theme_color": "black"
+}
